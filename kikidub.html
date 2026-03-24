@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App 用户体验反馈与技术支持</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #1d1d1f; max-width: 600px; margin: 0 auto; padding: 40px 20px; background-color: #f5f5f7; }
+        .card { background: white; padding: 40px 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        h1 { font-size: 26px; font-weight: 600; margin-bottom: 15px; color: #1d1d1f; text-align: center; }
+        .intro { color: #48484a; font-size: 15px; margin-bottom: 30px; text-align: justify; background: #f9f9fb; padding: 15px; border-radius: 12px; }
+        
+        .section-title { font-size: 18px; font-weight: 600; margin: 25px 0 15px; color: #0071e3; display: flex; align-items: center; }
+        .section-title::before { content: ""; width: 4px; height: 18px; background: #0071e3; margin-right: 10px; border-radius: 2px; }
+        
+        ul { padding-left: 20px; margin: 0; color: #3a3a3c; }
+        ul li { margin-bottom: 10px; list-style-type: none; position: relative; }
+        ul li::before { content: "•"; color: #0071e3; font-weight: bold; display: inline-block; width: 1em; margin-left: -1em; }
+        
+        .contact-box { background: #f0f7ff; padding: 20px; border-radius: 12px; margin-top: 30px; text-align: center; border: 1px solid #d0e3ff; }
+        .label { display: block; font-size: 14px; color: #48484a; margin-bottom: 5px; }
+        .email-value { font-size: 18px; color: #0071e3; text-decoration: none; font-weight: 600; word-break: break-all; }
+        
+        .footer { text-align: center; margin-top: 50px; font-size: 12px; color: #8e8e93; border-top: 1px solid #e5e5e5; padding-top: 20px; }
+        .privacy-note { font-size: 11px; margin-top: 10px; color: #aeaeb2; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>App 用户体验反馈问卷</h1>
+        
+        <p class="intro">
+            亲爱的用户，您好！感谢您使用我们的 App。为了更好地优化产品功能与体验，我们诚邀您参与本次用户反馈。您的宝贵意见将帮助我们持续改进。
+        </p>
+
+        <div class="section-title">建议反馈内容</div>
+        <p style="font-size: 14px; color: #86868b; margin-top: -10px;">为了快速定位问题，建议您在邮件中包含：</p>
+        <ul>
+            <li><strong>联系方式：</strong> 您的手机号或常用社交账号。</li>
+            <li><strong>设备型号：</strong> 例如 iPhone 15 Pro, iPad Air 等。</li>
+            <li><strong>系统版本：</strong> 例如 iOS 17.4, iOS 18.0 等。</li>
+            <li><strong>问题描述：</strong> 遇到的具体 Bug、闪退情况或功能改进建议。</li>
+            <li><strong>截图/录屏：</strong> 如有条件，请附上相关图片。</li>
+        </ul>
+
+        <div class="section-title">联系开发者</div>
+        <div class="contact-box">
+            <span class="label">反馈邮箱</span>
+            <a href="mailto:janny.mmmax@gmail.com" class="email-value">janny.mmmax@gmail.com</a>
+        </div>
+
+        <p class="privacy-note">
+            * 问卷及反馈信息仅用于产品优化，我们将严格保护您的隐私，不会泄露给任何第三方。
+        </p>
+    </div>
+
+    <div class="footer">
+        &copy; <span id="year"></span> App Support Team. 保留所有权利。
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
