@@ -30,12 +30,20 @@
     .btn:active { opacity: 0.8; }
     .tip { margin-top: 16px; font-size: 13px; color: #aaa; }
   </style>
-  <meta http-equiv="refresh" content="1; url=https://ixiui9scjsv.feishu.cn/share/base/form/shrcnbLY2ZEEsucPlNLv2VSgQbg">
   <script>
-    var TARGET = "https://ixiui9scjsv.feishu.cn/share/base/form/shrcnbLY2ZEEsucPlNLv2VSgQbg";
-    if (TARGET.indexOf("FEISHU") === -1) {
-      setTimeout(function() { window.location.href = TARGET; }, 800);
-    }
+    var params = new URLSearchParams(window.location.search);
+    var lang = params.get('lang') || 'zh';
+    var FORM_URLS = {
+      'zh': 'https://ixiui9scjsv.feishu.cn/share/base/form/shrcnbLY2ZEEsucPlNLv2VSgQbg',
+      'ja': 'https://ixiui9scjsv.feishu.cn/share/base/form/shrcnbLY2ZEEsucPlNLv2VSgQbg', // TODO: replace with ja form URL
+      'en': 'https://ixiui9scjsv.feishu.cn/share/base/form/shrcnbLY2ZEEsucPlNLv2VSgQbg'  // TODO: replace with en form URL
+    };
+    var TARGET = FORM_URLS[lang] || FORM_URLS['zh'];
+    document.addEventListener('DOMContentLoaded', function() {
+      var link = document.getElementById('link');
+      if (link) link.href = TARGET;
+    });
+    setTimeout(function() { window.location.href = TARGET; }, 800);
   </script>
 </head>
 <body>
