@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KikiDub 反馈</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, 'PingFang SC', sans-serif;
+      background: #fff8f5;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      min-height: 100vh; padding: 24px;
+      color: #333;
+    }
+    .icon { font-size: 56px; margin-bottom: 16px; }
+    h1 { font-size: 22px; font-weight: 700; margin-bottom: 8px; color: #1a1a1a; }
+    p { font-size: 15px; color: #666; text-align: center; line-height: 1.6; margin-bottom: 24px; }
+    .btn {
+      display: inline-block;
+      background: #FF6B35;
+      color: #fff;
+      font-size: 16px; font-weight: 600;
+      padding: 14px 36px;
+      border-radius: 28px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .btn:active { opacity: 0.8; }
+    .tip { margin-top: 16px; font-size: 13px; color: #aaa; }
+  </style>
+  <!-- UPDATE THIS URL when the Feishu form is created -->
+  <meta http-equiv="refresh" content="1; url=FEISHU_FEEDBACK_FORM_URL">
+  <script>
+    var TARGET = "FEISHU_FEEDBACK_FORM_URL";
+    if (TARGET.indexOf("FEISHU") === -1) {
+      setTimeout(function() { window.location.href = TARGET; }, 800);
+    }
+  </script>
+</head>
+<body>
+  <div class="icon">💬</div>
+  <h1>联系我们</h1>
+  <p>正在跳转到反馈表单…<br>如未自动跳转，请点击下方按钮。</p>
+  <a class="btn" id="link" href="FEISHU_FEEDBACK_FORM_URL">打开反馈表单</a>
+  <p class="tip">也可发送邮件至 <a href="mailto:qorvia@foxmail.com" style="color:#FF6B35">qorvia@foxmail.com</a></p>
+</body>
+</html>
