@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KikiDub — Support</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1d1d1f; background: #FFFAF7; line-height: 1.7; }
+        .wrap { max-width: 640px; margin: 0 auto; padding: 60px 5vw 80px; }
+        .back { font-size: 14px; color: #FF6B35; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; margin-bottom: 40px; }
+        .back:hover { opacity: 0.75; }
+        .app-tag { display: inline-block; background: #FFF3EE; color: #FF6B35; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+        h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 8px; }
+        .sub { font-size: 16px; color: #48484a; margin-bottom: 48px; }
+        h2 { font-size: 18px; font-weight: 600; margin: 36px 0 14px; padding-left: 12px; border-left: 3px solid #FF6B35; }
+        .faq-item { background: white; border: 1px solid #f0ece8; border-radius: 14px; padding: 20px 22px; margin-bottom: 12px; }
+        .faq-q { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+        .faq-a { font-size: 14px; color: #3a3a3c; }
+        .contact-box { background: #FFF3EE; border: 1px solid #ffe0d0; border-radius: 18px; padding: 32px 28px; text-align: center; margin-top: 48px; }
+        .contact-box h2 { border: none; padding: 0; margin: 0 0 10px; font-size: 20px; }
+        .contact-box p { font-size: 15px; color: #48484a; margin-bottom: 20px; }
+        .email-link { display: inline-block; font-size: 17px; font-weight: 600; color: #FF6B35; text-decoration: none; }
+        .email-link:hover { opacity: 0.8; }
+        .tips { font-size: 13px; color: #86868b; margin-top: 16px; text-align: left; }
+        .tips li { margin-bottom: 6px; }
+        footer { text-align: center; font-size: 13px; color: #86868b; border-top: 1px solid #f0ece8; padding-top: 24px; margin-top: 60px; }
+        footer a { color: #86868b; text-decoration: none; margin: 0 8px; }
+        footer a:hover { color: #FF6B35; }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <a class="back" href="kikidub.html">← KikiDub</a>
+    <span class="app-tag">KikiDub</span>
+    <h1>Support</h1>
+    <p class="sub">We're here to help. Check the FAQ below or reach out directly.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <p class="faq-q">🎙 The app asks for microphone access — why?</p>
+        <p class="faq-a">KikiDub needs the microphone only when your child records their dubbing lines. All recordings are saved locally on your device and are never uploaded anywhere.</p>
+    </div>
+    <div class="faq-item">
+        <p class="faq-q">📵 Does the app require an internet connection?</p>
+        <p class="faq-a">No. All course content, animations, and audio are bundled inside the app. After installation, KikiDub works entirely offline.</p>
+    </div>
+    <div class="faq-item">
+        <p class="faq-q">🌏 How do I change the dubbing language?</p>
+        <p class="faq-a">On the home screen, tap the language selector (EN / CH / JP) to switch between English, Chinese, and Japanese. The course content and voice lines will update immediately.</p>
+    </div>
+    <div class="faq-item">
+        <p class="faq-q">🔓 I purchased a theme unlock but it didn't activate.</p>
+        <p class="faq-a">Please make sure you're signed into the same Apple ID used for the purchase. Then go to the theme unlock screen and tap "Restore Purchases." If the issue persists, please contact us below.</p>
+    </div>
+    <div class="faq-item">
+        <p class="faq-q">💾 Where are my works saved? Can I back them up?</p>
+        <p class="faq-a">Works are saved in the app's local storage on your device. You can export any work as a video to your photo library by tapping the download icon on the My Works screen.</p>
+    </div>
+    <div class="faq-item">
+        <p class="faq-q">🗑 How do I delete a saved work?</p>
+        <p class="faq-a">On the My Works screen, swipe left on a work to reveal the delete option.</p>
+    </div>
+
+    <div class="contact-box">
+        <h2>Still need help?</h2>
+        <p>Send us a message and we'll get back to you as soon as possible.</p>
+        <a class="email-link" href="mailto:janny.mmmax@gmail.com">janny.mmmax@gmail.com</a>
+        <ul class="tips">
+            <li>📱 Please include your device model (e.g. iPhone 15 Pro) and iOS version</li>
+            <li>📝 Describe what you were doing when the issue occurred</li>
+            <li>📸 Screenshots or screen recordings are very helpful</li>
+        </ul>
+    </div>
+
+    <footer>
+        <a href="kikidub.html">Home</a>
+        <a href="kikidub-privacy.html">Privacy Policy</a>
+        <span>&copy; <span id="yr"></span> 智足者富 · KikiDub</span>
+        <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+    </footer>
+</div>
+</body>
+</html>
