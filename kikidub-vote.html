@@ -1,56 +1,15 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KikiDub 投票</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, 'PingFang SC', sans-serif;
-      background: #f5f8ff;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      min-height: 100vh; padding: 24px;
-      color: #333;
-    }
-    .icon { font-size: 56px; margin-bottom: 16px; }
-    h1 { font-size: 22px; font-weight: 700; margin-bottom: 8px; color: #1a1a1a; }
-    p { font-size: 15px; color: #666; text-align: center; line-height: 1.6; margin-bottom: 24px; }
-    .btn {
-      display: inline-block;
-      background: #0040e8;
-      color: #fff;
-      font-size: 16px; font-weight: 600;
-      padding: 14px 36px;
-      border-radius: 28px;
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-    .btn:active { opacity: 0.8; }
-    .tip { margin-top: 16px; font-size: 13px; color: #aaa; }
-  </style>
-  <script>
-    var params = new URLSearchParams(window.location.search);
-    var lang = params.get('lang') || 'zh';
-    var FORM_URLS = {
-      'zh': 'https://ixiui9scjsv.feishu.cn/share/base/form/shrcnnFzLNPmOBkMRx991nCTStc',
-      'ja': 'https://ixiui9scjsv.feishu.cn/share/base/form/shrcns6TM9gvPvovBfOdsut1qmd',
-      'en': 'https://ixiui9scjsv.feishu.cn/share/base/form/shrcnIXKjttJ4SY3HBNIFOsk3Lh'
-    };
-    var TARGET = FORM_URLS[lang] || FORM_URLS['zh'];
-    document.addEventListener('DOMContentLoaded', function() {
-      var link = document.getElementById('link');
-      if (link) link.href = TARGET;
-    });
-    setTimeout(function() { window.location.href = TARGET; }, 800);
-  </script>
-</head>
-<body>
-  <div class="icon">🌟</div>
-  <h1>告诉我们你的想法</h1>
-  <p>正在跳转到投票表单…<br>如未自动跳转，请点击下方按钮。</p>
-  <a class="btn" id="link" href="https://ixiui9scjsv.feishu.cn/share/base/form/shrcnnFzLNPmOBkMRx991nCTStc">打开投票表单</a>
-  <p class="tip">感谢你的支持！</p>
-</body>
-</html>
+<html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>KikiDub · Support</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#fffaf7;color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7}main{max-width:560px;margin:12vh auto;padding:32px 24px}.brand{color:#174b56;font-weight:700}h1{font-size:26px;line-height:1.4;margin:32px 0 16px}p{color:#555}a{display:inline-block;margin-top:20px;padding:12px 24px;border-radius:24px;background:#174b56;color:white;text-decoration:none}a:focus-visible{outline:3px solid #e28a31;outline-offset:4px}</style></head>
+<body><main><div class="brand">KikiDub</div><h1 id="title">此表单已停止使用</h1><p id="message">如需帮助或反馈，请使用 KikiDub 支持页面。</p><a id="support" href="kikidub-support.html">联系支持</a></main>
+<script>
+const translations={"zh": ["zh-Hans", "此表单已停止使用", "如需帮助或反馈，请使用 KikiDub 支持页面。", "联系支持"], "en": ["en", "This form is no longer available", "For help or feedback, please visit KikiDub Support.", "Contact support"], "ja": ["ja", "このフォームは受付を終了しました", "お問い合わせやご意見は、KikiDubのサポートページからお寄せください。", "サポートへ"], "es": ["es", "Este formulario ya no está disponible", "Si necesitas ayuda o quieres enviar comentarios, visita la página de soporte de KikiDub.", "Contactar con soporte"], "fr": ["fr", "Ce formulaire n’est plus disponible", "Pour obtenir de l’aide ou nous faire part de vos commentaires, consultez la page d’assistance KikiDub.", "Contacter l’assistance"]};
+const requested=new URLSearchParams(location.search).get('lang')||navigator.language||'zh';
+const language=requested.toLowerCase().split(/[-_]/)[0];
+const selected=translations[language]||translations.en;
+document.documentElement.lang=selected[0];
+document.title='KikiDub · '+selected[1];
+document.getElementById('title').textContent=selected[1];
+document.getElementById('message').textContent=selected[2];
+document.getElementById('support').textContent=selected[3];
+</script></body></html>
